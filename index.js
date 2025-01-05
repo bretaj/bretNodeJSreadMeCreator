@@ -61,7 +61,7 @@ const generateREADME = (data) => {
     ## Description
     ${data.description}
 
-    ##Table of Contents
+    ## Table of Contents
     - [Installation](#installation)
     - [Usage](#usage)
     - [License](#license)
@@ -69,28 +69,24 @@ const generateREADME = (data) => {
     - [Tests](#tests)
     - [Questions](#questions)
 
-    ##Installation
+    ## Installation
     To install dependencies, run the following command:
-    \`\`\`
     ${data.dependencies}
-    \`\`\`
-
-    ##Usage
+   
+    ## Usage
     ${data.repo}
 
-    ##License
+    ## License
     This project is licensed under the ${data.license} license.
 
-    ##Constributing 
+    ## Constributing 
     ${data.contribute}
 
-    ##Tests
+    ## Tests
     To run tests, use the following command 
-    \`\`\`
     ${data.tests}
-    \`\`\`
-
-    ##Questions
+    
+    ## Questions
     If you have any questions, please reach out to me at [${data.email}](mailto:${data.email}).
     GitHub: [${data.git}](https://github.com/${data.git})
     `;
