@@ -21,5 +21,9 @@
     "url": "https://github.com/bretaj/bretNodeJSreadMeCreator/issues"
   },
   "homepage": "https://github.com/bretaj/bretNodeJSreadMeCreator#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^12.3.0"
+  }
 }
