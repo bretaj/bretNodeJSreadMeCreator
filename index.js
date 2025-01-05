@@ -99,10 +99,25 @@ const generateREADME = (data) => {
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+async function writeToFile(fileName, data) {
+    try {
+        await writeFile(fileName, data);
+        console.log('README file has been successfully created!');
+    } catch (err) {
+        console.error('Error writing to file:', err);
+    }
+}
 
 // TODO: Create a function to initialize app
-// function init() {}
+async function init() {
+    try {
+        const userInput = await questions();
+        const readmeContent = generateREADME(userInput);
+        await writeFile('README.md', readmeContent);
+    } catch (err) {
+        console.error('Error initializing app:', err);
+    }
+}
 
 // Function call to initialize app
-// init();
+init();
