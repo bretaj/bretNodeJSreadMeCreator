@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer';
 import { writeFile } from 'fs/promises';
+import generateMarkdown from './generateMarkdown';
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -54,47 +55,8 @@ const questions = () => {
     ])
 }
 
-const generateREADME = (data) => {
-    return `
-    # ${data.projectTitle}
-
-    ## Description
-    ${data.description}
-
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-
-    ## Installation
-    To install dependencies, run the following command:
-    ${data.dependencies}
-   
-    ## Usage
-    ${data.repo}
-
-    ## License
-    This project is licensed under the ${data.license} license.
-
-    ## Constributing 
-    ${data.contribute}
-
-    ## Tests
-    To run tests, use the following command 
-    ${data.tests}
-    
-    ## Questions
-    If you have any questions, please reach out to me at [${data.email}](mailto:${data.email}).
-    GitHub: [${data.git}](https://github.com/${data.git})
-    `;
-};
-
-
-
 // TODO: Create a function to write README file
+
 async function writeToFile(fileName, data) {
     try {
         await writeFile(fileName, data);
@@ -108,7 +70,7 @@ async function writeToFile(fileName, data) {
 async function init() {
     try {
         const userInput = await questions();
-        const readmeContent = generateREADME(userInput);
+        const readmeContent = generateMarkdown(userInput);
         await writeFile('README.md', readmeContent);
     } catch (err) {
         console.error('Error initializing app:', err);
@@ -117,3 +79,41 @@ async function init() {
 
 // Function call to initialize app
 init();
+
+// const generateREADME = (data) => {
+//     return `
+//     # ${data.projectTitle}
+
+//     ## Description
+//     ${data.description}
+
+//     ## Table of Contents
+//     - [Installation](#installation)
+//     - [Usage](#usage)
+//     - [License](#license)
+//     - [Contributing](#contributing)
+//     - [Tests](#tests)
+//     - [Questions](#questions)
+
+//     ## Installation
+//     To install dependencies, run the following command:
+//     ${data.dependencies}
+   
+//     ## Usage
+//     ${data.repo}
+
+//     ## License
+//     This project is licensed under the ${data.license} license.
+
+//     ## Constributing 
+//     ${data.contribute}
+
+//     ## Tests
+//     To run tests, use the following command 
+//     ${data.tests}
+    
+//     ## Questions
+//     If you have any questions, please reach out to me at [${data.email}](mailto:${data.email}).
+//     GitHub: [${data.git}](https://github.com/${data.git})
+//     `;
+// };
