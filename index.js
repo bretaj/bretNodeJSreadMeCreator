@@ -23,12 +23,12 @@ const questions = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Please write a short description of your project',
+            message: 'please write a short description of your project',
         },
         {
             type: 'list',
             name: 'license',
-            message: 'What kind of license should your project have?',
+            message: 'what kind of license should your project have?',
             choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
         },
         {
@@ -54,8 +54,52 @@ const questions = () => {
     ])
 }
 
+const generateREADME = (data) => {
+    return `
+    # ${data.projectTitle}
+
+    ## Description
+    ${data.description}
+
+    ##Table of Contents
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+
+    ##Installation
+    To install dependencies, run the following command:
+    \`\`\`
+    ${data.dependencies}
+    \`\`\`
+
+    ##Usage
+    ${data.repo}
+
+    ##License
+    This project is licensed under the ${data.license} license.
+
+    ##Constributing 
+    ${data.contribute}
+
+    ##Tests
+    To run tests, use the following command 
+    \`\`\`
+    ${data.tests}
+    \`\`\`
+
+    ##Questions
+    If you have any questions, please reach out to me at [${data.email}](mailto:${data.email}).
+    GitHub: [${data.git}](https://github.com/${data.git})
+    `;
+};
+
+
+
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 // function init() {}
