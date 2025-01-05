@@ -1,0 +1,25 @@
+{
+  "name": "bretnodejsreadmecreator",
+  "version": "1.0.0",
+  "description": "readme file generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bretaj/bretNodeJSreadMeCreator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator",
+    "node.js"
+  ],
+  "author": "Bret Jensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bretaj/bretNodeJSreadMeCreator/issues"
+  },
+  "homepage": "https://github.com/bretaj/bretNodeJSreadMeCreator#readme",
+  "type": "module"
+}
