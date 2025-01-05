@@ -21,7 +21,7 @@
 ## License
     This project is licensed under the None license.
 
-## Constributing 
+## Contributing 
     please create your own branch
 
 ## Tests
