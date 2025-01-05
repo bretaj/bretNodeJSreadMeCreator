@@ -13,7 +13,7 @@
 
 ## Installation
     To install dependencies, run the following command:
-
+    `npm i`
 
 ## Usage
     initialize from index.js
