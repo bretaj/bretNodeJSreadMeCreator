@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer';
 import { writeFile } from 'fs/promises';
-import generateMarkdown from './generateMarkdown';
+import generateMarkdown from './generateMarkdown.js';
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -80,40 +80,3 @@ async function init() {
 // Function call to initialize app
 init();
 
-// const generateREADME = (data) => {
-//     return `
-//     # ${data.projectTitle}
-
-//     ## Description
-//     ${data.description}
-
-//     ## Table of Contents
-//     - [Installation](#installation)
-//     - [Usage](#usage)
-//     - [License](#license)
-//     - [Contributing](#contributing)
-//     - [Tests](#tests)
-//     - [Questions](#questions)
-
-//     ## Installation
-//     To install dependencies, run the following command:
-//     ${data.dependencies}
-   
-//     ## Usage
-//     ${data.repo}
-
-//     ## License
-//     This project is licensed under the ${data.license} license.
-
-//     ## Constributing 
-//     ${data.contribute}
-
-//     ## Tests
-//     To run tests, use the following command 
-//     ${data.tests}
-    
-//     ## Questions
-//     If you have any questions, please reach out to me at [${data.email}](mailto:${data.email}).
-//     GitHub: [${data.git}](https://github.com/${data.git})
-//     `;
-// };
