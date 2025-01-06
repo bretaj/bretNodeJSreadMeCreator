@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-    if (!license) {
+    if (license === 'None') {
         return '';
     }
 
@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
             return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
         case 'BSD 3-Clause':
             return '[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://opensource.org/licenses/BSD-3-Clause)';
-        default:
+        case 'None':
             return '';    
     }
 }
@@ -22,7 +22,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    if (!license) {
+    if (license === 'None') {
         return '';
     }
 
@@ -35,7 +35,7 @@ function renderLicenseLink(license) {
             return '[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0.html)';
         case 'BSD 3-Clause':
             return '[License: BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)';
-        default:
+        case 'None':
             return '';
     }
 }
@@ -43,8 +43,8 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    if (!license) {
-        return '';
+    if (license === 'None') {
+        return '## License';
     }
     return `## License\nThis project is licensed under the ${license} license. ${renderLicenseLink(license)}`;
 }
@@ -52,7 +52,9 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
     return `
     # ${data.projectTitle}
-    
+
+        ${renderLicenseBadge(data.license)}
+
     ## Description
     ${data.description}
 
