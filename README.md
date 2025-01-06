@@ -1,12 +1,11 @@
-
-    # Bret's node.js README generator
+# Bret's node.js README generator
 
         [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-    ## Description
+## Description
     this project utilizes node.js to create a readme file generator
 
-    ## Table of Contents
+## Table of Contents
     - [Installation](#installation)
     - [Usage](#usage)
     - [License](#license)
@@ -14,23 +13,23 @@
     - [Tests](#tests)
     - [Questions](#questions)
 
-     ## Installation
+## Installation
     To install dependencies, run the following command:
     npm i
    
-    ## Usage
+## Usage
     initialize from index.js
 
-    ## License
-This project is licensed under the MIT license. [License: MIT](https://opensource.org/licenses/MIT)
+## License
+    This project is licensed under the MIT license. [License: MIT](https://opensource.org/licenses/MIT)
 
-    ## Contributing 
+## Contributing 
     please use your own branch
 
-    ## Tests
+## Tests
     To run tests, use the following command 
     
     
-    ## Questions
+## Questions
     If you have any questions, please reach out to me at [jensenbret13@gmail.com](mailto:jensenbret13@gmail.com).
     GitHub: [bretaj](https://github.com/bretaj)
