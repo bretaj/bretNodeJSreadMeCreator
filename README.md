@@ -1,7 +1,7 @@
 
 # Bret's node.js README file generator
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 
 ## Description
 this project utilizes node.js to create a readme file
@@ -19,15 +19,12 @@ To install dependencies, run the following command:
 npm i
    
 ## Usage
-please create your own branch
-
+n/a
 
 ## License
-This project is licensed under the APACHE 2.0 license. [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-    
 
 ## Contributing 
-please create your own branch
+pleae create your own branch
 
 ## Tests
 To run tests, use the following command 
