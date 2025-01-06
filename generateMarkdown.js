@@ -46,7 +46,7 @@ function renderLicenseSection(license) {
     if (!license) {
         return '';
     }
-    return `## License:\nThis project is licensed under the ${data.license} license.`;
+    return `## License\nThis project is licensed under the ${license} license. ${renderLicenseLink(license)}`;
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -71,8 +71,7 @@ function generateMarkdown(data) {
     ## Usage
     ${data.repo}
 
-    ## License
-    // need to import from renderLicenseSection???
+    ${renderLicenseSection(data.license)}
 
     ## Contributing 
     ${data.contribute}
