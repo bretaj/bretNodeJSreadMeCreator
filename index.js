@@ -71,7 +71,7 @@ async function init() {
     try {
         const userInput = await questions();
         const readmeContent = generateMarkdown(userInput);
-        await writeFile('README.md', readmeContent);
+        await writeToFile('README.md', readmeContent);
     } catch (err) {
         console.error('Error initializing app:', err);
     }
