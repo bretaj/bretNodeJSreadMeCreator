@@ -1,8 +1,4 @@
-
-
 # Bret's node.js README file generator
-
-
 
 ## Description
 
@@ -11,7 +7,6 @@ this project utilizes node.js to create a readme file
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -21,12 +16,10 @@ To install dependencies, run the following command:
 npm i
    
 ## Usage
-n/a
-
-## License
+to see how to use, please watch this [video](https://drive.google.com/file/d/1exFboDHw2cVBXYTBU3xhJlGRIF_zXPIJ/view?usp=sharing)
 
 ## Contributing 
-pleae create your own branch
+please create your own branch
 
 ## Tests
 To run tests, use the following command 
