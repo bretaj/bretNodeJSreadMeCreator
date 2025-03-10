@@ -21,8 +21,7 @@ To install dependencies, run the following command:
 npm i
    
 ## Usage
-n/a
-
+to see how this generator works, [click here](https://drive.google.com/file/d/1exFboDHw2cVBXYTBU3xhJlGRIF_zXPIJ/view?usp=sharing)
 ## License
 
 ## Contributing 
