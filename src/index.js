@@ -10,21 +10,49 @@ const questions = () => {
             type: 'input',
             name: 'git',
             message: 'what is your GitHub username?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'GitHub username cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'email',
-            message: 'what is your e-mail address?',
+            message: 'What is your e-mail address?',
+            validate: (input) => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(input)) {
+                    return 'Please enter a valid email address.';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'projectTitle',
             message: 'what is the name of your project?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Project title cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'description',
             message: 'please write a short description of your project',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Description cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'list',
@@ -36,21 +64,49 @@ const questions = () => {
             type: 'input',
             name: 'dependencies',
             message: 'what command should be run to install dependencies?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Dependencies command cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'tests',
             message: 'what command should be run to run tests?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Tests command cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'repo',
             message: 'what does the user need to know about using the repo?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Info about using the repo cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'contribute',
             message: 'what does the user need to know about contributing to the repo?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Contribution information cannot be empty';
+                }
+                return true;
+            },
         },
     ])
 }
