@@ -21,8 +21,14 @@ const questions = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'what is your e-mail address?',
-            // TODO: validation for e-mail
+            message: 'What is your e-mail address?',
+            validate: (input) => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(input)) {
+                    return 'Please enter a valid email address.';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
