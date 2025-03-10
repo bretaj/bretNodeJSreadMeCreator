@@ -10,6 +10,13 @@ const questions = () => {
             type: 'input',
             name: 'git',
             message: 'what is your GitHub username?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'GitHub username cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
