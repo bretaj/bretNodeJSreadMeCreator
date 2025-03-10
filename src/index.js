@@ -22,16 +22,31 @@ const questions = () => {
             type: 'input',
             name: 'email',
             message: 'what is your e-mail address?',
+            // TODO: validation for e-mail
         },
         {
             type: 'input',
             name: 'projectTitle',
             message: 'what is the name of your project?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Project title cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'description',
             message: 'please write a short description of your project',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Description cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'list',
@@ -43,21 +58,49 @@ const questions = () => {
             type: 'input',
             name: 'dependencies',
             message: 'what command should be run to install dependencies?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Dependencies command cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'tests',
             message: 'what command should be run to run tests?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Tests command cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'repo',
             message: 'what does the user need to know about using the repo?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Info about using the repo cannot be empty';
+                }
+                return true;
+            },
         },
         {
             type: 'input',
             name: 'contribute',
             message: 'what does the user need to know about contributing to the repo?',
+            // implementing some validation logic
+            validate: (input) => {
+                if (input.trim() === '') {
+                    return 'Contribution information cannot be empty';
+                }
+                return true;
+            },
         },
     ])
 }
